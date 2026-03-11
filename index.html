@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romain Desreumaux - Portfolio</title>
+    <meta name="description"
+        content="Portfolio de Romain Desreumaux, étudiant en développement d'application web (BTS SIO) au lycée Gaston Berger de Lille.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">RD<span class="dot">.</span></a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link">Accueil</a></li>
+                    <li><a href="#about" class="nav-link">À propos</a></li>
+                    <li><a href="#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="#parcours-scolaire" class="nav-link">Formations</a></li>
+                    <li><a href="#parcours-pro" class="nav-link">Expériences</a></li>
+                    <li><a href="#projects" class="nav-link">Projets</a></li>
+                    <li><a href="#docs" class="nav-link">Documentation</a></li>
+                    <li><a href="#veille" class="nav-link">Veille</a></li>
+                </ul>
+            </nav>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <img src="images/bg-abstract.png" alt="Abstract Background">
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="greeting">Bonjour, je suis Romain Desreumaux</span>
+                <h1 class="title">Développeur d'applications <br> <span class="gradient-text">Web & Mobile</span></h1>
+                <p class="subtitle">Étudiant en BTS SIO au Lycée Gaston Berger, Lille. Passionné par la création
+                    d'expériences numériques modernes et performantes.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">À propos de moi</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Actuellement étudiant en <strong>BTS SIO (Services Informatiques aux Organisations)</strong>,
+                        option SLAM (Solutions Logicielles et Applications Métiers) au lycée Gaston Berger de Lille.</p>
+                    <p>Je me spécialise dans le développement web, avec une affinité particulière pour le back-end.
+                        Mon objectif est de concevoir des applications web qui sont non seulement
+                        fonctionnelles, mais aussi visuellement captivantes.</p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">Bac +2</span>
+                            <span class="stat-label">Années d'études</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Projets réalisés</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <!-- Stylized code card or similar visual could go here -->
+                    <div class="code-card">
+                        <div class="code-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="code-content">
+                            <pre><code><span class="keyword">const</span> <span class="var">developer</span> = {
+  <span class="key">name</span>: <span class="string">"Romain"</span>,
+  <span class="key">school</span>: <span class="string">"Gaston Berger"</span>,
+  <span class="key">skills</span>: [<span class="string">"HTML"</span>, <span class="string">"CSS"</span>, <span class="string">"JS"</span>],
+  <span class="key">passion</span>: <span class="keyword">true</span>
+};</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mes Compétences</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="skills-grid">
+                <!-- Skill Card -->
+                <div class="skill-card">
+                    <div class="skill-icon html"></div>
+                    <h3>HTML5 & CSS3</h3>
+                    <p>Structure sémantique et mise en page moderne (Flexbox, Grid).</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon js"></div>
+                    <h3>JavaScript</h3>
+                    <p>Logique côté client, manipulation du DOM et interactions.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon react"></div>
+                    <h3>PHP & SQL</h3>
+                    <p>Développement back-end et gestion de bases de données.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon tools"></div>
+                    <h3>Outils</h3>
+                    <p>Git, GitHub, VS Code, Figma pour le design.</p>
+                </div>
+            </div>
+            <div class="skills-cta" style="text-align: center; margin-top: 3rem;">
+                <a href="assets/tableau_competences.pdf" target="_blank" class="btn btn-primary">
+                    Télécharger mon Tableau de Compétences
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parcours Scolaire Section -->
+    <section id="parcours-scolaire" class="section parcours">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mes Formations</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="timeline">
+                <!-- Item 1: BTS -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024 - Présent</div>
+                    <div class="timeline-content">
+                        <h3>BTS SIO - Option SLAM</h3>
+                        <span class="timeline-school">Lycée Gaston Berger, Lille</span>
+                        <p>Brevet de Technicien Supérieur aux Services Informatiques aux Organisations. Option Solutions
+                            Logicielles et Applications Métiers.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2: Bac -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2022 - 2024</div>
+                    <div class="timeline-content">
+                        <h3>Baccalauréat</h3>
+                        <span class="timeline-school">Lycée César Baggio</span>
+                        <p>Obtention du Baccalauréat. Spécialités Système Informatique et Numérique.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parcours Professionnel Section -->
+    <section id="parcours-pro" class="section parcours" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mes Expériences</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="timeline">
+                <!-- Item 1: Stage 2 -->
+                <div class="timeline-item stage-clickable" data-stage="dzpn">
+                    <div class="timeline-dot dot-stage"></div>
+                    <div class="timeline-date">5 Janvier 2026 - 13 Février 2026</div>
+                    <div class="timeline-content">
+                        <h3>Stage Développeur Web (2ème année)</h3>
+                        <span class="timeline-school">DZPN Police Nationale</span>
+                        <p>62 Boulevard Belfort, Lille</p>
+                        <span class="view-more">Voir les détails +</span>
+                    </div>
+                </div>
+
+                <!-- Item 2: Stage 1 -->
+                <div class="timeline-item stage-clickable" data-stage="delssi">
+                    <div class="timeline-dot dot-stage"></div>
+                    <div class="timeline-date">2 Juin 2025 - 11 Juillet 2025</div>
+                    <div class="timeline-content">
+                        <h3>Stage Développeur Web (1ère année)</h3>
+                        <span class="timeline-school">DELSSI</span>
+                        <p>3 Avenue Antoine Pinay, Hem</p>
+                        <span class="view-more">Voir les détails +</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mes Projets</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/project-placeholder.png" alt="Projet 1">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-icon" aria-label="Voir le code">Code</a>
+                            <a href="#" class="btn-icon" aria-label="Voir la démo">Live</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Site E-commerce</h3>
+                        <p class="project-desc">Une plateforme complète de vente en ligne avec panier, gestion des
+                            utilisateurs et panneau d'administration.</p>
+                        <div class="project-tags">
+                            <span>PHP</span><span>MySQL</span><span>CSS</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/project-placeholder.png" alt="Projet 2">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-icon">Code</a>
+                            <a href="#" class="btn-icon">Live</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Gestionnaire de Tâches</h3>
+                        <p class="project-desc">Application web pour organiser ses projets scolaires avec système de
+                            dates limites et priorités.</p>
+                        <div class="project-tags">
+                            <span>JS</span><span>LocalStorage</span><span>HTML</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/project-placeholder.png" alt="Projet 3">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-icon">Code</a>
+                            <a href="#" class="btn-icon">Live</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio Personnel</h3>
+                        <p class="project-desc">Ce site web ! Une vitrine moderne développée entièrement en HTML/CSS
+                            pour présenter mes compétences.</p>
+                        <div class="project-tags">
+                            <span>HTML</span><span>CSS</span><span>Design</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Veille Technologique Section -->
+    <section id="veille" class="section veille">
+        <!-- ... (Content of Veille) ... -->
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Ma Veille Technologique</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="veille-intro">
+                <h3>Sujet : L'Intelligence Artificielle dans le monde de la médecine</h3>
+                <p>Dans le cadre de ma veille technologique, j'explore comment l'IA transforme le diagnostic, la
+                    chirurgie et la recherche médicale.</p>
+                <div class="veille-tools">
+                    <span class="tool-tag">Outils : Google Alerts, PubMed, Twitter</span>
+                </div>
+            </div>
+
+            <div class="veille-grid">
+                <!-- Article 1 -->
+                <a href="#" class="veille-card">
+                    <div class="veille-date">12 Déc 2024</div>
+                    <h4>Diagnostic Assisté par IA</h4>
+                    <p>Comment les algorithmes de Deep Learning détectent les tumeurs plus tôt que les radiologues.</p>
+                    <span class="read-more">Lire l'article &rarr;</span>
+                </a>
+
+                <!-- Article 2 -->
+                <a href="#" class="veille-card">
+                    <div class="veille-date">25 Nov 2024</div>
+                    <h4>Chirurgie Robotique</h4>
+                    <p>L'assistance par IA dans les blocs opératoires pour une précision micrométrique.</p>
+                    <span class="read-more">Lire l'article &rarr;</span>
+                </a>
+
+                <!-- Article 3 -->
+                <a href="#" class="veille-card">
+                    <div class="veille-date">08 Oct 2024</div>
+                    <h4>Médecine Personnalisée</h4>
+                    <p>L'utilisation du Big Data pour adapter les traitements génétiques à chaque patient.</p>
+                    <span class="read-more">Lire l'article &rarr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="docs" class="section docs" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Documentation & Preuves</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="docs-grid">
+                <!-- Doc Item 1 -->
+                <div class="doc-card">
+                    <div class="doc-icon">📄</div>
+                    <div class="doc-info">
+                        <h3>Rapport de Stage 1ère année</h3>
+                        <p>Compte rendu détaillé des missions effectuées.</p>
+                    </div>
+                    <a href="#" class="btn-download">Télécharger</a>
+                </div>
+
+                <!-- Doc Item 2 -->
+                <div class="doc-card">
+                    <div class="doc-icon">📊</div>
+                    <div class="doc-info">
+                        <h3>Tableau de Synthèse (E4)</h3>
+                        <p>Grille d'évaluation des compétences professionnelles.</p>
+                    </div>
+                    <a href="#" class="btn-download">Télécharger</a>
+                </div>
+
+                <!-- Doc Item 3 -->
+                <div class="doc-card">
+                    <div class="doc-icon">🎓</div>
+                    <div class="doc-info">
+                        <h3>Attestations de Certifications</h3>
+                        <p>Diplômes et certifications obtenus (MOOC, Pix...).</p>
+                    </div>
+                    <a href="#" class="btn-download">Télécharger</a>
+                </div>
+
+                <!-- Doc Item 4 -->
+                <div class="doc-card">
+                    <div class="doc-icon">📁</div>
+                    <div class="doc-info">
+                        <h3>Dossier Projets (E6)</h3>
+                        <p>Documentation technique des projets présentés.</p>
+                    </div>
+                    <a href="#" class="btn-download">Télécharger</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-social">
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">Email</a>
+            </div>
+            <p>&copy; 2024 Romain Desreumaux. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Experience Modal -->
+    <div id="experience-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Fermer">&times;</button>
+            <div class="modal-content">
+                <div id="modal-body"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
