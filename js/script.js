@@ -12,14 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
             company: 'DZPN Police Nationale',
             date: '5 Janvier 2026 - 13 Février 2026',
             location: '62 Boulevard Belfort, Lille',
-            description: "Durant ce stage de deuxième année au sein de la Direction Zonale de la Police Nationale, j'ai été chargé de missions critiques liées à la maintenance et à l'évolution de leurs outils internes.",
+            description: "La DZPN (Direction Zonale de la Police Nationale) est une direction créer par des réformes de la police nationale. Elle compte plusieurs services dont celui ou j'ai été en stage, le service zonale d'appui numérique avec un ingénieur à la tête du service.Le but est de développer et maintenir un portail d'applications.",
             missions: [
                 "Sécurisation des bases de données et des accès utilisateurs",
                 "Modification et optimisation de fonctions PHP existantes",
                 "Refonte partielle de l'interface utilisateur pour une meilleure ergonomie",
                 "Maintenance corrective sur l'intranet de la zone nord"
             ],
-            stack: ['PHP', 'SQL', 'JavaScript', 'HTML/CSS', 'Bootstrap'],
+            stack: ['PHP', 'SQL', 'phpMyAdmin', 'Visual Studio Code', ''],
             screenshots: [
                 { url: 'images/stages/dzpn-1.png', alt: 'Interface Intranet' },
                 { url: 'images/stages/dzpn-2.png', alt: 'Gestion des accès' }
@@ -34,14 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
             company: 'DELSSI',
             date: '2 Juin 2025 - 11 Juillet 2025',
             location: '3 Avenue Antoine Pinay, Hem',
-            description: "Mon premier stage en entreprise chez DELSSI m'a permis de découvrir le monde du développement professionnel et de mettre en pratique mes compétences en intégration web.",
+            description: "DELSSI est une société de service informatique spécialisée dans la conception et le développement d'applications métiers. Durant ce stage, j'ai pu refaire l'interface du site web Avianor qui est une entreprise également détenu par le gérant de la société DELSSI.",
             missions: [
-                "Intégration de maquettes Figma en HTML/CSS",
-                "Création de composants réutilisables en JavaScript",
-                "Tests de compatibilité cross-browser",
-                "Assistance à la mise en production de sites vitrines"
+                "Mise en place d'un environnement WordPress en local",
+                "Gestion de plugins sur WordPress",
+                "Gestion de plugins commercial sécurisée sur WordPress",
+                "Rédaction d'une politique de confidentialité pour le site"
             ],
-            stack: ['HTML5', 'CSS3', 'JavaScript', 'Figma', 'Git'],
+            stack: ['HTML', 'CSS', 'JavaScript', 'WordPress', 'PHP'],
             screenshots: [
                 { url: 'images/stages/delssi-1.png', alt: 'Dashboard client' },
                 { url: 'images/stages/delssi-2.png', alt: 'Mise en page responsive' }
@@ -50,6 +50,40 @@ document.addEventListener('DOMContentLoaded', () => {
                 { name: 'Rapport de stage DELSSI.pdf', url: 'assets/rapport_delssi.pdf' },
                 { name: 'Carnet de bord.pdf', url: 'assets/carnet_delssi.pdf' }
             ]
+        },
+        'projet1': {
+            title: 'Site E-commerce',
+            company: 'Projet Personnel',
+            date: '2024',
+            location: 'Lille',
+            description: "Une plateforme complète de vente en ligne avec panier, gestion des utilisateurs et panneau d'administration.",
+            missions: [
+                "Développement back-end en PHP",
+                "Conception et requêtage de base de données MySQL",
+                "Intégration HTML/CSS d'une interface responsive"
+            ],
+            stack: ['PHP', 'MySQL', 'CSS', 'HTML'],
+            screenshots: [
+                { url: 'images/project-placeholder.png', alt: 'Aperçu du site' }
+            ],
+            files: []
+        },
+        'projet2': {
+            title: 'Gestionnaire de Tâches',
+            company: 'Projet Scolaire',
+            date: '2023 - 2024',
+            location: 'Lycée Gaston Berger',
+            description: "Application web pour organiser ses projets scolaires avec système de dates limites et priorités.",
+            missions: [
+                "Mise en place de la logique métier en JavaScript",
+                "Sauvegarde des données via LocalStorage",
+                "Création d'une interface utilisateur intuitive"
+            ],
+            stack: ['JavaScript', 'LocalStorage', 'HTML', 'CSS'],
+            screenshots: [
+                { url: 'images/project-placeholder.png', alt: 'Tableau de bord' }
+            ],
+            files: []
         }
     };
 
