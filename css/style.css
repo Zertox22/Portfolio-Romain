@@ -382,7 +382,7 @@ h4 {
 /* --- Skills Section --- */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: var(--spacing-md);
 }
 
@@ -392,6 +392,42 @@ h4 {
     border-radius: var(--radius-md);
     transition: var(--transition-smooth);
     border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+/* --- Tools Section --- */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.tool-item {
+    background: var(--bg-card);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    transition: var(--transition-smooth);
+}
+
+.tool-item:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--primary-end);
+    transform: translateY(-5px);
+}
+
+.tool-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+@media (max-width: 768px) {
 }
 
 .skill-card:hover {
