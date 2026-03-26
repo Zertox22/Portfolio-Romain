@@ -42,8 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             stack: ['HTML', 'CSS', 'JavaScript', 'WordPress', 'PHP'],
             screenshots: [
-                { url: 'images/stages/delssi-1.png', alt: 'Dashboard client' },
-                { url: 'images/stages/delssi-2.png', alt: 'Mise en page responsive' }
+                { url: 'images/accueil_avianor.png', alt: 'Dashboard client' },
+                { url: 'images/paiements_avianor.png', alt: 'Mise en page responsive' },
+                { url: 'images/screen_portainer.jpg', alt: 'Interface Portainer' }
             ],
             files: [
                 { name: 'Rapport de stage DELSSI.pdf', url: 'assets/rapport_delssi.pdf' },
@@ -80,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Sauvegarde des données via LocalStorage",
                 "Création d'une interface utilisateur intuitive"
             ],
-            stack: ['JavaScript', 'LocalStorage', 'HTML'],
+            stack: ['PHP Symfony', 'Twig', 'CSS', 'Javascript', 'MySQL', 'Github', 'Visual Studio Code', 'phpMyAdmin', 'Git'],
             screenshots: [
                 { url: 'images/project-placeholder.png', alt: 'Tableau de bord' }
             ],
@@ -136,22 +137,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h3>Documents et Preuves</h3>
                 <div class="file-list">
                     ${data.files.map(file => {
-                        if (file.isPrivate) {
-                            return `
+            if (file.isPrivate) {
+                return `
                                 <div class="file-item">
                                     <span><i class="icon-file"></i> ${file.name} <span title="Document protégé">🔒</span></span>
                                     <a href="#" class="btn-download btn-private" data-url="${file.url}">Consulter</a>
                                 </div>
                             `;
-                        } else {
-                            return `
+            } else {
+                return `
                                 <div class="file-item">
                                     <span><i class="icon-file"></i> ${file.name}</span>
                                     <a href="${file.url}" class="btn-download" target="_blank">Consulter</a>
                                 </div>
                             `;
-                        }
-                    }).join('')}
+            }
+        }).join('')}
                 </div>
             </div>
         `;

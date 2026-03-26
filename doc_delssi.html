@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Favicon -->
@@ -18,11 +21,13 @@
             flex-direction: column;
             min-height: 100vh;
         }
+
         main {
             flex: 1;
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <header class="header">
@@ -48,49 +53,111 @@
                     <div class="divider"></div>
                 </div>
                 <p style="text-align: center; margin-bottom: 3rem; color: var(--text-secondary);">
-                    Retrouvez ci-dessous l'ensemble de la documentation et des preuves liées à mon stage de 1ère année chez DELSSI.
+                    Retrouvez ci-dessous l'ensemble de la documentation et des preuves liées à mon stage de 1ère année
+                    chez DELSSI.
                 </p>
-                
+
                 <div class="docs-grid">
                     <!-- Doc Item 1 -->
                     <div class="doc-card">
-                        <div class="doc-icon">📓</div>
+                        <div class="doc-icon">🛒</div>
                         <div class="doc-info">
-                            <h3>Carnet de bord</h3>
-                            <p>Suivi régulier des tâches et avancement durant le stage.</p>
+                            <h3>Gestion plugins commercial wordpress</h3>
+                            <p>Tableau comparatif des plugins commercial de WordPress.</p>
                         </div>
-                        <a href="assets/carnet_delssi.pdf" class="btn-download" target="_blank">Consulter</a>
+                        <a href="documentation/comparatif_plugins_wordpress.xlsx" class="btn-download"
+                            target="_blank">Consulter</a>
                     </div>
 
                     <!-- Doc Item 2 -->
                     <div class="doc-card">
-                        <div class="doc-icon">📄</div>
+                        <div class="doc-icon">📧</div>
                         <div class="doc-info">
-                            <h3>Rapport de Stage</h3>
-                            <p>Compte rendu complet et détaillé des missions effectuées.</p>
+                            <h3>Gestion plugins SMTP wordpress</h3>
+                            <p>Tableau comparatif des plugins SMTP de WordPress.</p>
                         </div>
-                        <a href="assets/rapport_delssi.pdf" class="btn-download" target="_blank">Consulter</a>
+                        <a href="documentation/comparatif_plugin_smtp.xlsx" class="btn-download"
+                            target="_blank">Consulter</a>
                     </div>
 
                     <!-- Doc Item 3 -->
                     <div class="doc-card">
-                        <div class="doc-icon">🎓</div>
+                        <div class="doc-icon">💎</div>
                         <div class="doc-info">
-                            <h3>Attestation de stage <span title="Document protégé">🔒</span></h3>
-                            <p>Document officiel attestant de la réalisation du stage.</p>
+                            <h3>Comparaison des abonnements premium wordpress</h3>
+                            <p>Tableau comparatif des abonnements premium de WordPress.
+                            <p>
                         </div>
-                        <a href="#" class="btn-download btn-private" data-url="documentation/attestation_delssi.pdf">Consulter</a>
+                        <a href="documentation/comparaison_plan_wp.xlsx" class="btn-download"
+                            target="_blank">Consulter</a>
+                    </div>
+
+                    <!-- Doc Item 4 -->
+                    <div class="doc-card">
+                        <div class="doc-icon">🛍️</div>
+                        <div class="doc-info">
+                            <h3>Fonctionnalités du plugin WooCommerce</h3>
+                            <p>Présentation des principales fonctionnalités offertes par WooCommerce.</p>
+                        </div>
+                        <a href="documentation/plugin_woocommerce.xlsx" class="btn-download"
+                            target="_blank">Consulter</a>
+                    </div>
+
+                    <!-- Doc Item 5 -->
+                    <div class="doc-card">
+                        <div class="doc-icon">⚙️</div>
+                        <div class="doc-info">
+                            <h3>Installation de WordPress</h3>
+                            <p>Guide étape par étape pour l'installation de WordPress en local sur une machine physique.
+                            </p>
+                        </div>
+                        <a href="documentation/installation_wordpress.docx" class="btn-download"
+                            target="_blank">Consulter</a>
+                    </div>
+
+                    <!-- Doc Item 6 -->
+                    <div class="doc-card">
+                        <div class="doc-icon">🐳</div>
+                        <div class="doc-info">
+                            <h3>Composition d'un docker-compose <span title="Document protégé">🔒</span></h3>
+                            <p>Structure d'un fichier docker-compose.yml.</p>
+                        </div>
+                        <a href="#" class="btn-download btn-private" data-url="documentation/docker-compose.yml">Consulter</a>
+                    </div>
+
+                    <!-- Doc Item 7 -->
+                    <div class="doc-card">
+                        <div class="doc-icon">🗄️</div>
+                        <div class="doc-info">
+                            <h3>Installation de MySql Server sur Windows Server 2019</h3>
+                            <p>Procédure d'installation de MySQL Server sur Windows Server 2019.</p>
+                        </div>
+                        <a href="documentation/install_mysqlserver_windowsserver.docx" class="btn-download"
+                            target="_blank">Consulter</a>
+                    </div>
+
+                    <!-- Doc Item 8 -->
+                    <div class="doc-card">
+                        <div class="doc-icon">📋</div>
+                        <div class="doc-info">
+                            <h3>Documentation de fin de stage (Compte-rendu) <span title="Document protégé">🔒</span></h3>
+                            <p>Documentation rendu au patron de l'entreprise à la fin du stage chez DELSSI.</p>
+                        </div>
+                        <a href="#" class="btn-download btn-private" data-url="documentation/documentation_wordpress.docx">Consulter</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-social">
-                <a href="https://www.linkedin.com/in/romain-desreumaux-6b03152b5/" class="social-link" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/romain-desreumaux-6b03152b5/" class="social-link"
+                    target="_blank">LinkedIn</a>
                 <a href="https://github.com/Zertox22" class="social-link" target="_blank">GitHub</a>
             </div>
             <p>&copy; 2024 Romain Desreumaux. Tous droits réservés.</p>
@@ -100,4 +167,5 @@
     <!-- Scripts -->
     <script src="js/script.js"></script>
 </body>
+
 </html>

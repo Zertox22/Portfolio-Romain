@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  wordpress:
+    image: wordpress:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./wordpress:/var/www/html
+    environment:
+      WORDPRESS_DB_HOST: host.docker.internal 
+      WORDPRESS_DB_NAME: site
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: rd*-2025
