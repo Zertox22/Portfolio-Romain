@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation Stage DELSSI - Romain Desreumaux</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">RD<span class="dot">.</span></a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html#parcours-pro" class="nav-link">← Retour aux expériences</a></li>
+                </ul>
+            </nav>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <section class="section docs" style="margin-top: 5rem; background: rgba(255,255,255,0.02);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Documentation du Stage : DELSSI</h2>
+                    <div class="divider"></div>
+                </div>
+                <p style="text-align: center; margin-bottom: 3rem; color: var(--text-secondary);">
+                    Retrouvez ci-dessous l'ensemble de la documentation et des preuves liées à mon stage de 1ère année chez DELSSI.
+                </p>
+                
+                <div class="docs-grid">
+                    <!-- Doc Item 1 -->
+                    <div class="doc-card">
+                        <div class="doc-icon">📓</div>
+                        <div class="doc-info">
+                            <h3>Carnet de bord</h3>
+                            <p>Suivi régulier des tâches et avancement durant le stage.</p>
+                        </div>
+                        <a href="assets/carnet_delssi.pdf" class="btn-download" target="_blank">Consulter</a>
+                    </div>
+
+                    <!-- Doc Item 2 -->
+                    <div class="doc-card">
+                        <div class="doc-icon">📄</div>
+                        <div class="doc-info">
+                            <h3>Rapport de Stage</h3>
+                            <p>Compte rendu complet et détaillé des missions effectuées.</p>
+                        </div>
+                        <a href="assets/rapport_delssi.pdf" class="btn-download" target="_blank">Consulter</a>
+                    </div>
+
+                    <!-- Doc Item 3 -->
+                    <div class="doc-card">
+                        <div class="doc-icon">🎓</div>
+                        <div class="doc-info">
+                            <h3>Attestation de stage</h3>
+                            <p>Document officiel attestant de la réalisation du stage.</p>
+                        </div>
+                        <a href="assets/attestation_delssi.pdf" class="btn-download" target="_blank">Consulter</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/romain-desreumaux-6b03152b5/" class="social-link" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Zertox22" class="social-link" target="_blank">GitHub</a>
+            </div>
+            <p>&copy; 2024 Romain Desreumaux. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -14,19 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
             location: '62 Boulevard Belfort, Lille',
             description: "La DZPN (Direction Zonale de la Police Nationale) est une direction créer par des réformes de la police nationale. Elle compte plusieurs services dont celui ou j'ai été en stage, le service zonale d'appui numérique avec un ingénieur à la tête du service.Le but est de développer et maintenir un portail d'applications.",
             missions: [
-                "Sécurisation des bases de données et des accès utilisateurs",
-                "Modification et optimisation de fonctions PHP existantes",
-                "Refonte partielle de l'interface utilisateur pour une meilleure ergonomie",
-                "Maintenance corrective sur l'intranet de la zone nord"
+                "Mise à jour d'une application web",
+                "Tests unitaires",
+                "Organiser les fichiers dans différents dossiers"
             ],
-            stack: ['PHP', 'SQL', 'phpMyAdmin', 'Visual Studio Code', ''],
+            stack: ['PHP', 'SQL', 'phpMyAdmin', 'Visual Studio Code'],
             screenshots: [
-                { url: 'images/stages/dzpn-1.png', alt: 'Interface Intranet' },
-                { url: 'images/stages/dzpn-2.png', alt: 'Gestion des accès' }
+                { url: 'documentation/capture_ecran_police1.jpg', alt: 'Interface Intranet' },
+                { url: 'documentation/capture_ecran_police2.jpg', alt: 'Gestion des accès' }
             ],
             files: [
-                { name: 'Rapport de stage DZPN.pdf', url: 'assets/rapport_dzpn.pdf' },
-                { name: 'Attestation de stage.pdf', url: 'assets/attestation_dzpn.pdf' }
+                { name: 'Présentation de stage.odp', url: 'documentation/presentation_stage_romain.odp' },
+                { name: 'Attestation de stage.pdf', url: 'documentation/attestation_dzpn.pdf' }
             ]
         },
         'delssi': {
@@ -48,30 +47,32 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             files: [
                 { name: 'Rapport de stage DELSSI.pdf', url: 'assets/rapport_delssi.pdf' },
-                { name: 'Carnet de bord.pdf', url: 'assets/carnet_delssi.pdf' }
+                { name: 'Documentation stage', url: 'doc_delssi.html' },
+                { name: 'Attestation de stage.pdf', url: 'documentation/attestation_delssi.pdf' }
             ]
         },
         'projet1': {
-            title: 'Site E-commerce',
-            company: 'Projet Personnel',
-            date: '2024',
-            location: 'Lille',
-            description: "Une plateforme complète de vente en ligne avec panier, gestion des utilisateurs et panneau d'administration.",
+            title: 'Site web Trans Ortho (AP Première année)',
+            company: 'Projet Scolaire',
+            date: '2024 - 2025',
+            location: 'Lycée Gaston Berger',
+            description: "L'association Trans-Ortho est une association qui vise à promouvoir l'accompagnement orthophonique des personnes transidentitaires, faciliter l'accès des personnes trans à l'orthophonie, développer et soutenir des projets scientifiques, intellectuels ou matériels portant sur la voix et les transidentités, encourager la pratique d'accompagnement vocal des personnes transidentitaires et soutenir la recherche auprès des orthophonistes et des étudiants en orthophonie, informer sur les problématiques liées à la voix et aux transidentités et organiser des formations, congrès et colloques. La présidente est Laura Bakanov et notre contact dans cette association est Juliette Deffever. Ils cherchent à avoir un site web afin de pouvoir accomplir leurs objectifs de manière plus simple, et de manière plus accessible que sur les réseaux sociaux.",
             missions: [
-                "Développement back-end en PHP",
-                "Conception et requêtage de base de données MySQL",
-                "Intégration HTML/CSS d'une interface responsive"
+                "Modélisation de la base de données (MCD/MLD)",
+                "Création de la base de données MySQL",
+                "Création de pages HTML/CSS, JS",
+                "Réalisation d'une politique de confidentialité pour le site"
             ],
-            stack: ['PHP', 'MySQL', 'CSS', 'HTML'],
+            stack: ['HTML', 'CSS', 'Javascript', 'MySQL', 'Visual Studio Code', 'phpMyAdmin', 'Github'],
             screenshots: [
                 { url: 'images/project-placeholder.png', alt: 'Aperçu du site' }
             ],
             files: []
         },
         'projet2': {
-            title: 'Gestionnaire de Tâches',
+            title: 'Applications web CashCash (AP Deuxième année)',
             company: 'Projet Scolaire',
-            date: '2023 - 2024',
+            date: '2025 - 2026',
             location: 'Lycée Gaston Berger',
             description: "Application web pour organiser ses projets scolaires avec système de dates limites et priorités.",
             missions: [
@@ -79,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Sauvegarde des données via LocalStorage",
                 "Création d'une interface utilisateur intuitive"
             ],
-            stack: ['JavaScript', 'LocalStorage', 'HTML', 'CSS'],
+            stack: ['JavaScript', 'LocalStorage', 'HTML'],
             screenshots: [
                 { url: 'images/project-placeholder.png', alt: 'Tableau de bord' }
             ],
@@ -163,10 +164,49 @@ document.addEventListener('DOMContentLoaded', () => {
     closeBtn.addEventListener('click', closeModal);
     overlay.addEventListener('click', closeModal);
 
+    // Lightbox for screenshots
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    lightbox.innerHTML = `
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-img" src="" alt="Capture plein écran">
+    `;
+    document.body.appendChild(lightbox);
+
+    const lightboxImg = lightbox.querySelector('.lightbox-img');
+    const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+    // Event delegation for screenshots
+    modalBody.addEventListener('click', (e) => {
+        const screenshotItem = e.target.closest('.screenshot-item');
+        if (screenshotItem) {
+            const img = screenshotItem.querySelector('img');
+            if (img) {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+            }
+        }
+    });
+
+    // Close lightbox
+    lightboxClose.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+    });
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.classList.remove('active');
+        }
+    });
+
     // ESC key to close
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            closeModal();
+        if (e.key === 'Escape') {
+            if (lightbox.classList.contains('active')) {
+                lightbox.classList.remove('active');
+            } else if (modal.classList.contains('active')) {
+                closeModal();
+            }
         }
     });
 });
