@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mise en place de la Veille - Romain Desreumaux</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+        }
+        /* Custom styles for this page content */
+        .veille-content {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .veille-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        .veille-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .proof-item {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .proof-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        .proof-item h4 {
+            color: white;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">RD<span class="dot">.</span></a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html#veille" class="nav-link">← Retour à la veille</a></li>
+                </ul>
+            </nav>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <section class="section" style="margin-top: 5rem;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Analyse & Mise en place</h2>
+                    <div class="divider"></div>
+                </div>
+                
+                <!-- Justification -->
+                <div class="veille-content">
+                    <h3>1. Pourquoi ce thème ?</h3>
+                    <p>
+                        <!-- À COMPLÉTER -->
+                        L'Intelligence Artificielle (IA) est en train de révolutionner tous les secteurs de l'industrie, mais c'est dans le domaine médical que son impact me semble le plus prometteur et le plus critique. J'ai choisi d'orienter ma veille sur ce sujet car les enjeux éthiques, de confidentialité des données et de progrès technique représentent un défi majeur pour les développeurs d'aujourd'hui. 
+                        <em>(Ceci est un exemple, vous pouvez écrire votre propre texte ici pour justifier votre choix de veille !)</em>
+                    </p>
+                </div>
+
+                <!-- Preuves et Outils -->
+                <div class="veille-content">
+                    <h3>2. Méthodologie et Preuves de mise en place</h3>
+                    <p>
+                        Afin de me tenir informé des dernières actualités de manière automatisée et efficace, j'ai configuré plusieurs outils de suivi. Voici les captures d'écran prouvant leur mise en place :
+                    </p>
+                    <div class="proof-grid">
+                        <div class="proof-item">
+                            <!-- Remplace le lien 'src' par ton image -->
+                            <img src="images/preuves/google-alerts.jpg" alt="Preuve d'utilisation de Google Alerts" onerror="this.src='images/project-placeholder.png'">
+                            <h4>Google Alerts</h4>
+                            <p style="font-size: 0.9em; margin-bottom: 0;">Mots-clés ciblés : "IA Santé", "Deep Learning Médecine", etc.</p>
+                        </div>
+                        <div class="proof-item">
+                            <!-- Remplace le lien 'src' par ton image -->
+                            <img src="images/preuves/newsletters.jpg" alt="Preuve d'abonnement aux Newsletters" onerror="this.src='images/project-placeholder.png'">
+                            <h4>Newsletters & Flux</h4>
+                            <p style="font-size: 0.9em; margin-bottom: 0;">Abonnement aux publications spécialisées du secteur.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Avis personnel -->
+                <div class="veille-content">
+                    <h3>3. Mon avis personnel sur le sujet</h3>
+                    <p>
+                        <!-- À COMPLÉTER -->
+                        Selon moi, bien que l'IA ne puisse pas remplacer le médecin dans la relation humaine et la prise de décision éthique complexe, elle est appelée à devenir un "super-assistant" indispensable. Le vrai débat ne porte plus sur l'efficacité de la technologie, mais sur la sécurité des données de santé et la résistance au changement des institutions médicales actuelles.
+                        <em>(Ceci est un exemple, vous pouvez rédiger votre conclusion/bilan ici !)</em>
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/romain-desreumaux-6b03152b5/" class="social-link" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Zertox22" class="social-link" target="_blank">GitHub</a>
+            </div>
+            <p>&copy; 2024 Romain Desreumaux. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html>

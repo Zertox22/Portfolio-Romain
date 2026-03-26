@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             files: [
                 { name: 'Présentation de stage.odp', url: 'documentation/presentation_stage_romain.odp' },
-                { name: 'Attestation de stage.pdf', url: 'documentation/attestation_dzpn.pdf' }
+                { name: 'Attestation de stage.pdf', url: 'documentation/attestation_dzpn.pdf', isPrivate: true }
             ]
         },
         'delssi': {
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             files: [
                 { name: 'Rapport de stage DELSSI.pdf', url: 'assets/rapport_delssi.pdf' },
                 { name: 'Documentation stage', url: 'doc_delssi.html' },
-                { name: 'Attestation de stage.pdf', url: 'documentation/attestation_delssi.pdf' }
+                { name: 'Attestation de stage.pdf', url: 'documentation/attestation_delssi.pdf', isPrivate: true }
             ]
         },
         'projet1': {
@@ -135,12 +135,23 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="modal-section">
                 <h3>Documents et Preuves</h3>
                 <div class="file-list">
-                    ${data.files.map(file => `
-                        <div class="file-item">
-                            <span><i class="icon-file"></i> ${file.name}</span>
-                            <a href="${file.url}" class="btn-download" target="_blank">Consulter</a>
-                        </div>
-                    `).join('')}
+                    ${data.files.map(file => {
+                        if (file.isPrivate) {
+                            return `
+                                <div class="file-item">
+                                    <span><i class="icon-file"></i> ${file.name} <span title="Document protégé">🔒</span></span>
+                                    <a href="#" class="btn-download btn-private" data-url="${file.url}">Consulter</a>
+                                </div>
+                            `;
+                        } else {
+                            return `
+                                <div class="file-item">
+                                    <span><i class="icon-file"></i> ${file.name}</span>
+                                    <a href="${file.url}" class="btn-download" target="_blank">Consulter</a>
+                                </div>
+                            `;
+                        }
+                    }).join('')}
                 </div>
             </div>
         `;
@@ -159,6 +170,73 @@ document.addEventListener('DOMContentLoaded', () => {
             const stageId = item.getAttribute('data-stage');
             openModal(stageId);
         });
+    });
+
+    // Password Modal Injection
+    const pwdModal = document.createElement('div');
+    pwdModal.className = 'modal';
+    pwdModal.id = 'pwd-modal';
+    pwdModal.style.zIndex = '9999'; // ensure it's on top of the main modal
+    pwdModal.innerHTML = `
+        <div class="modal-overlay pwd-overlay"></div>
+        <div class="modal-container" style="max-width: 400px; z-index: 10000;">
+            <button class="modal-close pwd-close" aria-label="Fermer">&times;</button>
+            <div class="modal-content" style="padding: 2.5rem 2rem; text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🔒</div>
+                <h3 style="margin-bottom: 0.5rem; font-size: 1.5rem;">Document Protégé</h3>
+                <p style="margin-bottom: 1.5rem; color: var(--text-muted);">Veuillez entrer le mot de passe pour y accéder.</p>
+                <input type="password" id="pwd-input" placeholder="Mot de passe" style="width: 100%; padding: 0.8rem 1rem; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: rgba(0,0,0,0.3); color: var(--text-main); font-family: 'Inter', sans-serif; font-size: 1rem; outline: none;">
+                <p id="pwd-error" style="color: #ff4757; margin-bottom: 1rem; display: none; font-size: 0.9em;">Mot de passe incorrect.</p>
+                <button id="pwd-submit" class="btn btn-primary" style="width: 100%; border: none; cursor: pointer;">Valider</button>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(pwdModal);
+
+    const pwdInput = document.getElementById('pwd-input');
+    const pwdSubmit = document.getElementById('pwd-submit');
+    const pwdClose = pwdModal.querySelector('.pwd-close');
+    const pwdOverlay = pwdModal.querySelector('.pwd-overlay');
+    const pwdError = document.getElementById('pwd-error');
+    let currentTargetUrl = '';
+
+    function openPwdModal(url) {
+        currentTargetUrl = url;
+        pwdModal.classList.add('active');
+        pwdInput.value = '';
+        pwdError.style.display = 'none';
+        setTimeout(() => pwdInput.focus(), 100);
+    }
+
+    function closePwdModal() {
+        pwdModal.classList.remove('active');
+        pwdInput.value = '';
+    }
+
+    function checkPassword() {
+        if (pwdInput.value === 'romain2026') { // <-- C'est ici que tu peux changer le mot de passe !
+            window.open(currentTargetUrl, '_blank');
+            closePwdModal();
+        } else {
+            pwdError.style.display = 'block';
+            pwdInput.value = '';
+            pwdInput.focus();
+        }
+    }
+
+    pwdSubmit.addEventListener('click', checkPassword);
+    pwdInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') checkPassword();
+    });
+    pwdClose.addEventListener('click', closePwdModal);
+    pwdOverlay.addEventListener('click', closePwdModal);
+
+    // Handle private documents globally (modal + standalone pages)
+    document.body.addEventListener('click', (e) => {
+        if (e.target.classList.contains('btn-private')) {
+            e.preventDefault();
+            openPwdModal(e.target.dataset.url);
+        }
     });
 
     closeBtn.addEventListener('click', closeModal);
@@ -202,7 +280,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // ESC key to close
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
-            if (lightbox.classList.contains('active')) {
+            if (pwdModal && pwdModal.classList.contains('active')) {
+                closePwdModal();
+            } else if (lightbox.classList.contains('active')) {
                 lightbox.classList.remove('active');
             } else if (modal.classList.contains('active')) {
                 closeModal();
