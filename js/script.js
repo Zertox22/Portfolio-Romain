@@ -40,14 +40,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Gestion de plugins commercial sécurisée sur WordPress",
                 "Rédaction d'une politique de confidentialité pour le site"
             ],
-            stack: ['HTML', 'CSS', 'JavaScript', 'WordPress', 'PHP'],
+            stack: ['HTML', 'CSS', 'JavaScript', 'WordPress', 'PHP', 'Visual Studio Code', 'Docker'],
             screenshots: [
                 { url: 'images/accueil_avianor.png', alt: 'Dashboard client' },
                 { url: 'images/paiements_avianor.png', alt: 'Mise en page responsive' },
                 { url: 'images/screen_portainer.jpg', alt: 'Interface Portainer' }
             ],
             files: [
-                { name: 'Rapport de stage DELSSI.pdf', url: 'assets/rapport_delssi.pdf' },
+                { name: 'Compte-rendu stage', url: 'documentation/compterendustagedelssi.pdf' },
                 { name: 'Documentation stage', url: 'doc_delssi.html' },
                 { name: 'Attestation de stage.pdf', url: 'documentation/attestation_delssi.pdf', isPrivate: true }
             ]
@@ -66,9 +66,15 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             stack: ['HTML', 'CSS', 'Javascript', 'MySQL', 'Visual Studio Code', 'phpMyAdmin', 'Github'],
             screenshots: [
-                { url: 'images/project-placeholder.png', alt: 'Aperçu du site' }
+                { url: 'images/accueil_transortho.png', alt: 'Page d\'accueil' },
+                { url: 'images/capture_code_transortho.png', alt: 'Page de présentation' },
+                { url: 'images/plan_site_transortho.png', alt: 'Base de données' },
+                { url: 'images/diagramme_transortho.png', alt: 'Formulaire de contact' }
             ],
-            files: []
+            files: [
+                { name: 'Compte-rendu', url: 'documentation/compte_rendu_transortho.pdf' },
+                { name: 'Compte-rendu réunion staff', url: 'documentation/compte_rendu_reunion.txt' }
+            ]
         },
         'projet2': {
             title: 'Applications web CashCash (AP Deuxième année)',
@@ -86,6 +92,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 { url: 'images/project-placeholder.png', alt: 'Tableau de bord' }
             ],
             files: []
+        },
+        'glpi': {
+            title: 'GLPI',
+            company: 'Projet Scolaire',
+            date: '2025 - 2026',
+            location: 'Lycée Gaston Berger',
+            description: "GLPI est un outil de ticketing qui premet de répondre aux besoins des utilisateurs en matière de support informatique.",
+            missions: [
+                "Installation et configuration de GLPI",
+                "Création et gestion des tickets d'incidents",
+                "Gestion des utilisateurs et des droits"
+            ],
+            stack: ['GLPI', 'PHP', 'MySQL', 'Apache'],
+            screenshots: [
+                { url: 'images/project-placeholder.png', alt: 'Interface GLPI' }
+            ],
+            files: [
+                { name: 'Installation glpi', url: '#' },
+                { name: 'Mise en place de la récupération des ticket', url: '#' },
+                { name: 'gestion des utilisateurs', url: '#' }
+            ]
         }
     };
 

@@ -1,0 +1,10 @@
+Compte rendu réunion TransOrtho :
+
+- Police d'écriture : Montserrat
+- Partir sur le design avec les photos
+- Conserver la barre header sur l'ensemble des pages
+- Changer la couleur du fond (bleu en blanc/blanc cassé par exemple)
+- Onglet événements dans les renseignements
+- Pas directement une mise en contact un utilisateur en recherche vers un orthophoniste mais afficher à l'utilisateur une liste des praticiens autour de lui
+- Envoyer le formulaire afin que les administrateurs puissent avoir la main sur ceux-ci (type google forms)
+- Ajouter les villes pour les étudiants, patients et praticiens (partie base de données)
