@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Favicon -->
@@ -18,9 +21,11 @@
             flex-direction: column;
             min-height: 100vh;
         }
+
         main {
             flex: 1;
         }
+
         /* Custom styles for this page content */
         .veille-content {
             background: rgba(255, 255, 255, 0.03);
@@ -29,22 +34,26 @@
             margin-bottom: 3rem;
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
+
         .veille-content h3 {
             color: var(--primary-color);
             margin-bottom: 1.5rem;
             font-size: 1.8rem;
         }
+
         .veille-content p {
             margin-bottom: 1.5rem;
             line-height: 1.7;
             color: var(--text-secondary);
         }
+
         .proof-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
+
         .proof-item {
             background: rgba(0, 0, 0, 0.3);
             border-radius: 8px;
@@ -52,13 +61,71 @@
             text-align: center;
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
+
         .proof-item img {
             max-width: 100%;
-            height: auto;
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
             border-radius: 6px;
             margin-bottom: 1rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        .proof-item img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(0, 194, 255, 0.25);
+        }
+
+        /* Lightbox veille */
+        #veille-lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        #veille-lightbox.open {
+            display: flex;
+        }
+
+        #veille-lightbox img {
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: 10px;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+            object-fit: contain;
+        }
+
+        #veille-lightbox-close {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            font-size: 2.5rem;
+            color: white;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.1);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s ease;
+        }
+
+        #veille-lightbox-close:hover {
+            background: white;
+            color: black;
+        }
+
         .proof-item h4 {
             color: white;
             margin-bottom: 0.5rem;
@@ -66,6 +133,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <header class="header">
@@ -90,35 +158,72 @@
                     <h2 class="section-title">Analyse & Mise en place</h2>
                     <div class="divider"></div>
                 </div>
-                
+
                 <!-- Justification -->
                 <div class="veille-content">
                     <h3>1. Pourquoi ce thème ?</h3>
                     <p>
                         <!-- À COMPLÉTER -->
-                        L'Intelligence Artificielle (IA) est en train de révolutionner tous les secteurs de l'industrie, mais c'est dans le domaine médical que son impact me semble le plus prometteur et le plus critique. J'ai choisi d'orienter ma veille sur ce sujet car les enjeux éthiques, de confidentialité des données et de progrès technique représentent un défi majeur pour les développeurs d'aujourd'hui. 
-                        <em>(Ceci est un exemple, vous pouvez écrire votre propre texte ici pour justifier votre choix de veille !)</em>
+                        J’ai choisi ce sujet parce que l’intelligence artificielle est une technologie très actuelle et
+                        qu’elle est de plus en plus utilisée dans la médecine.
+                        Ça m’intéressait de voir comment l’informatique peut aider à améliorer les diagnostics ou le
+                        travail des médecins.
+                        En tant qu’étudiant en SLAM, ça me permet aussi de comprendre des applications concrètes du
+                        développement et du traitement des données.
+                        Et ça m’a permis de découvrir des enjeux importants comme la sécurité des données et les limites
+                        de l’IA.
+                        J'ai également choisi ce sujet car il me concerne très particulièrement personnellement et que
+                        je voulais m'intéresser à ce domaine là.
                     </p>
                 </div>
 
-                <!-- Preuves et Outils -->
+                <!-- Preuves Google Alerts -->
                 <div class="veille-content">
-                    <h3>2. Méthodologie et Preuves de mise en place</h3>
+                    <h3>2. Mise en place — Google Alerts</h3>
                     <p>
-                        Afin de me tenir informé des dernières actualités de manière automatisée et efficace, j'ai configuré plusieurs outils de suivi. Voici les captures d'écran prouvant leur mise en place :
+                        Afin de me tenir informé automatiquement des dernières actualités sur l'IA en médecine,
+                        j'ai configuré des alertes Google (Google Alerts) avec des mots-clés ciblés.
+                        Voici les captures d'écran prouvant leur mise en place :
                     </p>
                     <div class="proof-grid">
                         <div class="proof-item">
-                            <!-- Remplace le lien 'src' par ton image -->
-                            <img src="images/preuves/google-alerts.jpg" alt="Preuve d'utilisation de Google Alerts" onerror="this.src='images/project-placeholder.png'">
-                            <h4>Google Alerts</h4>
-                            <p style="font-size: 0.9em; margin-bottom: 0;">Mots-clés ciblés : "IA Santé", "Deep Learning Médecine", etc.</p>
+                            <img src="images/capture_alerts_google.png" alt="Configuration de Google Alerts"
+                                onerror="this.src='images/project-placeholder.png'">
+                            <h4>Configuration Google Alerts</h4>
+                            <p style="font-size: 0.9em; margin-bottom: 0;">Mots-clés ciblés : "intelligence
+                                artificielle", "santé", etc.</p>
                         </div>
                         <div class="proof-item">
-                            <!-- Remplace le lien 'src' par ton image -->
-                            <img src="images/preuves/newsletters.jpg" alt="Preuve d'abonnement aux Newsletters" onerror="this.src='images/project-placeholder.png'">
+                            <img src="images/resultat_alerts_veille.png" alt="Résultats des alertes Google reçues"
+                                onerror="this.src='images/project-placeholder.png'">
+                            <h4>Résultats des Alertes</h4>
+                            <p style="font-size: 0.9em; margin-bottom: 0;">Exemple d'articles reçus automatiquement via
+                                Google Alerts.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preuves Newsletters -->
+                <div class="veille-content">
+                    <h3>3. Mise en place — Newsletters & Flux</h3>
+                    <p>
+                        En complément, j'ai personnellement recherché et suivi des articles publiés par des sources
+                        spécialisées et des newsletters médicales pour m'informer de l'actualité liée à ce thème.
+                    </p>
+                    <div class="proof-grid">
+                        <div class="proof-item">
+                            <img src="images/capture_newsletters.png" alt="Preuve d'abonnement aux Newsletters"
+                                onerror="this.src='images/project-placeholder.png'">
                             <h4>Newsletters & Flux</h4>
-                            <p style="font-size: 0.9em; margin-bottom: 0;">Abonnement aux publications spécialisées du secteur.</p>
+                            <p style="font-size: 0.9em; margin-bottom: 0;">Recherche sur internet et dans la partie
+                                actualités.</p>
+                        </div>
+                        <div class="proof-item">
+                            <img src="images/resultat_newsletter.png" alt="Exemple d'article reçu via newsletter"
+                                onerror="this.src='images/project-placeholder.png'">
+                            <h4>Exemple d'article reçu</h4>
+                            <p style="font-size: 0.9em; margin-bottom: 0;">Article venant du journal "Le Monde" qui nous
+                                parle de l'intelligence artificielle et de la médecine.</p>
                         </div>
                     </div>
                 </div>
@@ -128,8 +233,13 @@
                     <h3>3. Mon avis personnel sur le sujet</h3>
                     <p>
                         <!-- À COMPLÉTER -->
-                        Selon moi, bien que l'IA ne puisse pas remplacer le médecin dans la relation humaine et la prise de décision éthique complexe, elle est appelée à devenir un "super-assistant" indispensable. Le vrai débat ne porte plus sur l'efficacité de la technologie, mais sur la sécurité des données de santé et la résistance au changement des institutions médicales actuelles.
-                        <em>(Ceci est un exemple, vous pouvez rédiger votre conclusion/bilan ici !)</em>
+                        Personnellement, je trouve que l’IA en médecine est très intéressante parce qu’elle peut
+                        vraiment
+                        aider les médecins, surtout pour les diagnostics.
+                        Mais je pense qu’il faut faire attention, notamment pour les données de santé et le fait que
+                        l’IA
+                        ne doit pas remplacer les médecins.
+                        Pour moi, ça doit rester un outil d’aide.
                     </p>
                 </div>
 
@@ -141,7 +251,8 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-social">
-                <a href="https://www.linkedin.com/in/romain-desreumaux-6b03152b5/" class="social-link" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/romain-desreumaux-6b03152b5/" class="social-link"
+                    target="_blank">LinkedIn</a>
                 <a href="https://github.com/Zertox22" class="social-link" target="_blank">GitHub</a>
             </div>
             <p>&copy; 2024 Romain Desreumaux. Tous droits réservés.</p>
@@ -150,5 +261,39 @@
 
     <!-- Scripts -->
     <script src="js/script.js"></script>
+
+    <!-- Lightbox Veille -->
+    <div id="veille-lightbox">
+        <span id="veille-lightbox-close">&times;</span>
+        <img id="veille-lightbox-img" src="" alt="Image agrandie">
+    </div>
+
+    <script>
+        (function () {
+            const lightbox = document.getElementById('veille-lightbox');
+            const lightboxImg = document.getElementById('veille-lightbox-img');
+            const closeBtn = document.getElementById('veille-lightbox-close');
+
+            document.querySelectorAll('.proof-item img').forEach(img => {
+                img.addEventListener('click', () => {
+                    lightboxImg.src = img.src;
+                    lightbox.classList.add('open');
+                });
+            });
+
+            function closeLightbox() {
+                lightbox.classList.remove('open');
+            }
+
+            closeBtn.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) closeLightbox();
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeLightbox();
+            });
+        })();
+    </script>
 </body>
+
 </html>

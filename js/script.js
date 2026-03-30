@@ -104,14 +104,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Création et gestion des tickets d'incidents",
                 "Gestion des utilisateurs et des droits"
             ],
-            stack: ['GLPI', 'PHP', 'MySQL', 'Apache'],
+            stack: ['GLPI', 'Helpdesk', 'Administration'],
             screenshots: [
-                { url: 'images/project-placeholder.png', alt: 'Interface GLPI' }
+                { url: 'images/console_glpi.png', alt: 'Console GLPI' },
+                { url: 'images/accueil_glpi.png', alt: 'Accueil GLPI' },
+                { url: 'images/ticker_traiter.jpg', alt: 'Ticket traité' }
             ],
             files: [
-                { name: 'Installation glpi', url: '#' },
-                { name: 'Mise en place de la récupération des ticket', url: '#' },
-                { name: 'gestion des utilisateurs', url: '#' }
+                { name: 'Installation glpi', url: 'documentation/compte_rendu_glpi.pdf' },
+                { name: 'Mise en place de la récupération des ticket', url: 'documentation/gestion_ticket_glpi.pdf' },
+                { name: 'Gestion des utilisateurs', url: 'documentation/gestion_utilisateurs_glpi.pdf' },
+                { name: 'Gestions des droits des utilisateurs', url: 'documentation/utilisateurs_glpi.xlsx  ' }
             ]
         }
     };
