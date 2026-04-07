@@ -81,15 +81,24 @@ document.addEventListener('DOMContentLoaded', () => {
             company: 'Projet Scolaire',
             date: '2025 - 2026',
             location: 'Lycée Gaston Berger',
-            description: "Application web pour organiser ses projets scolaires avec système de dates limites et priorités.",
+            description: "La société CashCash vend des terminaux 'point de vente' (TPV) à des hypermarchés, supermarchés et petits commerçants. CashCash compte de nombreux sites en France (centres régionaux et agences). Elle dispose d'un SI (système d'information) construit sur un réseau IP et composé de plateformes hétérogènes (MacOS, Linux, Windows, IOS, Android, etc).",
             missions: [
-                "Mise en place de la logique métier en JavaScript",
-                "Sauvegarde des données via LocalStorage",
-                "Création d'une interface utilisateur intuitive"
+                "Conception de base de données",
+                "Application web de gestion des interventions",
+                "Création d'un client lourd"
             ],
             stack: ['PHP Symfony', 'Twig', 'CSS', 'Javascript', 'MySQL', 'Github', 'Visual Studio Code', 'phpMyAdmin', 'Git'],
             screenshots: [
-                { url: 'images/project-placeholder.png', alt: 'Tableau de bord' }
+                { url: 'images/capture_connexion_cashcash.png', alt: 'Page de connexion CashCash' },
+                { url: 'images/capture_interface_admin_cashcash.png', alt: 'Interface administrateur CashCash' },
+                { url: 'images/capture_interface_gest_cashcash.png', alt: 'Interface gestionnaire CashCash' },
+                { url: 'images/capture_interface_tech_cashcash.png', alt: 'Interface technicien CashCash' },
+                { url: 'images/capture_personnel_cashcash.png', alt: 'Gestion du personnel CashCash' },
+                { url: 'images/capture_code_interface_admin.png', alt: 'Code de l\'interface administrateur' },
+                { url: 'images/capture_php_code_login_page.png', alt: 'Code PHP de la page de connexion' },
+                { url: 'images/capture_twig_cashcash.png', alt: 'Template Twig CashCash' },
+                { url: 'images/diagramme_cashcash.png', alt: 'Diagramme de cas utilisation' },
+                { url: 'images/maquette_site_cashcash.png', alt: 'Maquette du site CashCash' }
             ],
             files: []
         },
@@ -108,7 +117,8 @@ document.addEventListener('DOMContentLoaded', () => {
             screenshots: [
                 { url: 'images/console_glpi.png', alt: 'Console GLPI' },
                 { url: 'images/accueil_glpi.png', alt: 'Accueil GLPI' },
-                { url: 'images/ticker_traiter.jpg', alt: 'Ticket traité' }
+                { url: 'images/ticker_traiter.jpg', alt: 'Ticket traité' },
+                { url: 'images/capture_connexion_glpi.png', alt: 'Connexion GLPI' }
             ],
             files: [
                 { name: 'Installation glpi', url: 'documentation/compte_rendu_glpi.pdf' },
